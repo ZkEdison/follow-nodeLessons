@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    |     
+    title
+  body
+    // The content below is only a placeholder and can be replaced.
+    link(rel="stylesheet", href="bootstrap/css/bootstrap.css")
+    link(rel="stylesheet", href="css/basic.css")
+    include ./include/head.pug
+    .container-fluid
+      .row
+        .col-sm-2
+          a.list-group-item.active(href="#") 商品管理
+          |             
+          a.list-group-item(href="/")
+            | 商品列表
+          |             
+          a.list-group-item(href="/add")
+            | 增加商品
+          | 			
+          a.list-group-item.active(href="#") 分类管理
+          |             
+          a.list-group-item(href="/")
+            | 商品分类列表
+          |             
+          a.list-group-item(href="/add")
+            | 增加商品分类
+        |         
+        .col-sm-10
+          ol.breadcrumb
+            li.active
+              | 商品管理
+            |                 
+            li.active
+              | 商品列表
+          |             
+          .panel.panel-default
+            .panel-heading
+              | 增加商品
+            |                 
+            .panel-body
+              .table-responsive.input-form
+                form(action="/doAdd", method="post")
+                  ul
+                    li
+                      | 商品名称: 
+                      input(type="text", name="title")
+                    |                                 
+                    li
+                      | 商品图片: 
+                      input(type="file", name="pic")
+                    |                                 
+                    li
+                      | 商品价格: 
+                      input(type="text", name="price")
+                    |                                 
+                    li
+                      | 商品邮费: 
+                      input(type="text", name="fee")
+                    |                                 
+                    li
+                      | 商品描述:
+                      textarea(name="description", id="", cols="60", rows="8")
+                    |                                 
+                    li
+                      br
+                      |                                     
+                      button.btn.btn-default(type="submit") 提交

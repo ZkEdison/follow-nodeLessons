@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title login
+    |     
+    link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
+    |  
+    | 	
+    link(rel="stylesheet", href="css/login.css")
+    |     
+    link(rel="stylesheet", href="css/basic.css")
+    |     
+    script(src="bootstrap/js/jquery-1.10.1.js")
+    |     
+    script(src="bootstrap/js/bootstrap.js")
+  body
+    .container
+      .row
+        .col-md-offset-3.col-md-6
+          form.form-horizontal(action="/doLogin" method="post")
+            span.heading login
+            |                 
+            .form-group
+              input#inputEmail3.form-control(type="text", placeholder="userName" name="userName")
+              |                     
+              i.fa.fa-user
+            |                 
+            .form-group.help
+              input#inputPassword3.form-control(type="text", placeholder="password" name="password")
+              |                     
+              i.fa.fa-lock
+              |                     
+              a.fa.fa-question-circle(href="#")
+            |                 
+            .form-group
+              .main-checkbox
+                input#checkbox1(type="checkbox", value="None", name="check")
+                |                         
+                label(for="checkbox1")
+              |                     
+              span.text Remember me
+              button.btn.btn-default(type="submit") 提交
+              |                     

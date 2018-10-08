@@ -1,0 +1,111 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    |     
+    title
+  body
+    // The content below is only a placeholder and can be replaced.
+    link(rel="stylesheet", href="bootstrap/css/bootstrap.css")
+    include ./include/head.pug
+    .container-fluid
+      .row
+        .col-sm-2
+          a.list-group-item.active(href="#") 商品管理
+          |             
+          a.list-group-item(href="/")
+            | 商品列表
+          |             
+          a.list-group-item(href="/add")
+            | 增加商品
+          | 			
+          a.list-group-item.active(href="#") 分类管理
+          |             
+          a.list-group-item(href="/")
+            | 商品分类列表
+          |             
+          a.list-group-item(href="/add")
+            | 增加商品分类
+        |         
+        .col-sm-10
+          ol.breadcrumb
+            li.active
+              | 商品管理
+            |                 
+            li.active
+              | 商品列表
+          |             
+          .panel.panel-default
+            .panel-heading
+              | 搜索
+            |                 
+            .panel-body
+              form.form-inline(role="form")
+                .form-group
+                  label(for="name") 名称
+                  |                             
+                  input#name.form-control(type="text", placeholder="请输入名称")
+                |                         
+                .form-group
+                  button.btn.btn-default(type="submit") 开始搜索
+          //
+            列表展示
+          .table-responsive
+            table.table.table-striped
+              thead
+                tr
+                  th 编号
+                  |                         
+                  th 图标
+                  |                         
+                  th 名称
+                  |                         
+                  th 价格
+                  |                         
+                  th 邮费
+                  |                        
+                  |                         
+                  th.text-center 操作
+              |                     
+              tbody
+                tr
+                  td 1
+                  |                         
+                  td 图标
+                  |                         
+                  td 背包1111111
+                  |                         
+                  td 20元
+                  |                         
+                  td 10元
+                  |                       
+                  |                         
+                  td.text-center 修改  删除
+                | 					   
+                tr
+                  td 2
+                  |                         
+                  td 图标
+                  |                         
+                  td thinpad笔记本电脑
+                  |                         
+                  td 20元
+                  |                         
+                  td 10元
+                  |                       
+                  |                         
+                  td.text-center 修改  删除
+                | 					   
+                tr
+                  td 3
+                  |                         
+                  td 图标
+                  |                         
+                  td iphone7
+                  |                         
+                  td 20元
+                  |                         
+                  td 10元
+                  |                       
+                  |                         
+                  td.text-center 修改  删除
